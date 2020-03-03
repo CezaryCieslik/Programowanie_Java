@@ -1,8 +1,10 @@
 package com.company;
 
+import com.company.devices.Car;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Human me = new Human();
         me.firstName = "Kacper";
@@ -30,11 +32,30 @@ public class Main {
         cleanOne.producer = "fiat";
         cleanOne.model = "bravo";
         cleanOne.yearOfProduction = 2015;
-        cleanOne.plates = "GDA32342";
+        cleanOne.setPlates("GDA41");
 
 
-        me.car = cleanOne;
+        me.setCar(cleanOne);
 
-        System.out.println(me.car.plates);
+        Human wife = new Human();
+        wife.firstName = "Zła";
+        wife.lastName = "Kobieta";
+        wife.riseMySalary();
+        wife.setCar(me.getCar());
+
+        System.out.println(wife.getCar().getPlates());
+        System.out.println(me.getCar().getPlates());
+
+        System.out.println(me.getCar());
+        System.out.println(wife.getCar());
+
+        System.out.println(me);
+        System.out.println(wife);
+
+        System.out.println(me.getSalary());
+
+        wife.feed();
+        me.takeForAWalk();
+        System.out.println(me.species);
     }
 }
