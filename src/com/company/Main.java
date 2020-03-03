@@ -25,5 +25,16 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.feed();
 
+
+        Car cleanOne = new Car();
+        cleanOne.producer = "fiat";
+        cleanOne.model = "bravo";
+        cleanOne.yearOfProduction = 2015;
+        cleanOne.plates = "GDA32342";
+
+
+        me.car = cleanOne;
+
+        System.out.println(me.car.plates);
     }
 }
